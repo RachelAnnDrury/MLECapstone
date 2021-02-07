@@ -7,7 +7,6 @@ import os
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
-from sklearn.datasets import make_classification
 from sklearn.linear_model import LogisticRegression
 # from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
@@ -26,11 +25,12 @@ df = TabularDatasetFactory.from_delimited_files(path=data_location)
 def clean_data(data):
     # Scale data
     X_df = data.to_pandas_dataframe().dropna()
-    X = df.drop_columns('DEATH_EVENT')
-    sc = StandardScaler()
-    X_df = sc.fit_transform(X)
+#    X = df.drop_columns('DEATH_EVENT')
+#    sc = StandardScaler()
+#    X_df = sc.fit_transform(X)
 
-    y_df = df.keep_columns('DEATH_EVENT')
+    y_df = X_df.pop('DEATH_EVENT')
+    # y_df = df.keep_columns('DEATH_EVENT')
     
     return X_df, y_df
 
