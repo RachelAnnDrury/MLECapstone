@@ -24,13 +24,11 @@ df = TabularDatasetFactory.from_delimited_files(path=data_location)
 # Clean data from file
 def clean_data(data):
     # Scale data
+    sc = StandardScaler()
     X_df = data.to_pandas_dataframe().dropna()
-#    X = df.drop_columns('DEATH_EVENT')
-#    sc = StandardScaler()
-#    X_df = sc.fit_transform(X)
-
-    y_df = X_df.pop('DEATH_EVENT')
-    # y_df = df.keep_columns('DEATH_EVENT')
+    y_df = X_df['DEATH_EVENT']
+    X_df = X_df.drop(['DEATH_EVENT'], axis = 1)
+    X_df = sc.fit_transform(X_df)
     
     return X_df, y_df
 
