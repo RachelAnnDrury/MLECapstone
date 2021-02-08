@@ -9,8 +9,7 @@ from azureml.core import Model
 
 def init():
     global model
-    # Change 'registered.sav' to match AutoML
-    model_path = Model.get_model_path('registered.sav')
+    model_path = Model.get_model_path('regheartmodel.sav')
     model = joblib.load(model_path)
 
 def run(data):
