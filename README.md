@@ -4,8 +4,7 @@ Machine Learning Engineer with Microsoft Azure Capstone Project: Heart Failure P
 
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
----Explain about the compute set-up here; mention necessary file inclusion within directory (train.py, score.py) and the interaction between the two Notebooks. - This is also the location for the compute closeout information (specify that to run the HyperDrive Notebook first, and if not running the AutoML Notebook, to closeout of the compute manually).
+The Jupyter Notebooks in this project are designed for use in the Microsoft Azure SDK. Files necessary to upload to the directory include hyperparameter_tuning.ipynb, automl.ipynb, train.py, and score.py. Each Jupyter Notebook can be run independently, but it is best to first run the hyperparameter_tuning.ipynb and then the automl.ipynb, since they are assigned to use the same compute, and the automl.ipynb will clean-up resources. To use a different compute than the one assigned, update the amlcompute_cluster_name from 'mlecscompute' to the name of the desired existing compute.
 
 ## Dataset
 
@@ -46,9 +45,11 @@ The dataset is from outside the AzureML framework. Both Notebooks search for the
 The configuration settings for this AutoML experiment rely on the advantages of using AutoML to detect the relationship between a series of variables and a target binary classification. Settings allow for twenty minutes of experimentation with a maximum of five concurrent iterations focused on increasing the overall accuracy of the model.
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+The most accurate model produced by the AutoML experiment was almost always Voting Ensemble, followed closely by Stacking Ensemble, with accuracy ranging from 87% - 89%. Separate experimental attempts at altering the settings yielded little to no difference, so the best way to improve the accuracy of this model would be to obtain more datapoints (rows in the dataset) and potentially additional relevant features (columns in the dataset). Generally time, serum_creatinine, and ejection fraction were the most important variables, but there may be additional information (features) that could be included about the patients to improve accuracy without overfitting. 
 
 *TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+**SCREENSHOT** RunDetails widget for AutoML 
+**SCREENSHOT** Best Model trained with parameters
 
 ## Hyperparameter Tuning
 Logistic regression uses a logit function to compute the probability of outcomes with multiple explanatory variables. Logistic Regression can handle sparse input, making it useful for a small dataset, as seen in this project.
@@ -59,6 +60,8 @@ The "C" parameter controls the penalty strength ("inverse regularity strength") 
 The Logistic Regression Model powered by HyperDrive hyperparameter tuning consistently gave results around 81% accuracy (the primary metric), which is above the minimum that I set for the experiment (80%), but below the target of 85%+. Refining and fine tuning additional hyperparameters could have provided a superior model, but reviewing the results, including those from the AutoML run, a random forest classifier would have likely provided a more accurate model. If possible, gathering additional datapoints and expanding the set could also increase the accuracy of the model. 
 
 *TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+**SCREENSHOT** RunDetails widget for HyperDrive
+**SCREENSHOT** Best Model trained with parameters
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
