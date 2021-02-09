@@ -70,6 +70,13 @@ The deployed Voting Ensemble model takes the input variables in the "Test Web Se
 
 ***SCREENSHOT*** Deployed Model - test (from notebook)
 
+## Future Work
+The AutoML model produced in this project had less than 90% accuracy and leaves room for improvement. The following are some suggestions that could increase the accuracy of the model:
+
+- Increase training data (the dataset is rather small, with only 300 rows; additional datapoints could improve accuracy or better reflect the accuracy of a model in a larger sample size. 
+- Provide additional input variables (there may be other factors contributing to patient deaths outside the provided variables; using machine learning to determine the relevance of additional data could provide a more accurate and relevant model).
+- Increase resource allocation and add layers if more data is available to analyze (at the current size, additional resources would not be well-used, but if new variables were added, additional computing time and resources may be necessary to analyze their relevance in relation to the existing variables and each other. 
+
 ## Screen Recording
 Visit this URL: ***SCREENCASTURL*** to view the project screencast, demonstrating: 
 - A working model
