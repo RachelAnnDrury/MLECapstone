@@ -51,9 +51,17 @@ The configuration settings for this AutoML experiment rely on the advantages of 
 ### Results
 The most accurate model produced by the AutoML experiment was almost always Voting Ensemble, followed closely by Stacking Ensemble, with accuracy ranging from 87% - 89%. Separate experimental attempts at altering the settings yielded little to no difference, so the best way to improve the accuracy of this model would be to obtain more datapoints (rows in the dataset) and potentially additional relevant features (columns in the dataset). Generally time, serum_creatinine, and ejection fraction were the most important variables, but there may be additional information (features) that could be included about the patients to improve accuracy without overfitting. 
 
-*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-**SCREENSHOT** RunDetails widget for AutoML 
-**SCREENSHOT** Best Model trained with parameters
+*Screenshot: RunDetails Widget from AutoML Run*
+![AutoMLRunDetailsWidget1](https://user-images.githubusercontent.com/73516567/107421126-7691b580-6ace-11eb-9674-18161b0f7c0a.png)
+
+
+*Screenshot: RunDetails Widget from AutoML Run with Child Run Details*
+![AutoMLRunDetailsWidget2](https://user-images.githubusercontent.com/73516567/107421081-6c6fb700-6ace-11eb-9c5e-1ca7e8bf7a16.png)
+
+
+*Screenshot: Best Model from AutoML Run*
+![AutoMLBestModel](https://user-images.githubusercontent.com/73516567/107420857-37fbfb00-6ace-11eb-959c-e565366d40c1.png)
+
 
 ## Hyperparameter Tuning
 Logistic regression uses a logit function to compute the probability of outcomes with multiple explanatory variables. Logistic Regression can handle sparse input, making it useful for a small dataset, as seen in this project.
@@ -79,6 +87,12 @@ The Logistic Regression Model powered by HyperDrive hyperparameter tuning consis
 The deployed Voting Ensemble model takes the input variables in the "Test Web Service" section of the automl.ipynb file. To submit a query, simply edit the "Test Web Service" data to the desired inputs and run that cell and the following, which contains the "result" variable and prints the prediction based upon the data inputs. 
 
 ***SCREENSHOT*** Deployed Model - test (from notebook)
+*Screenshot: Deployed Model*
+![AutoMLEndpoint1](https://user-images.githubusercontent.com/73516567/107421230-8e693980-6ace-11eb-99ff-e97f60387263.png)
+
+
+*Screenshot: Web Service Test on Deployed Model*
+
 
 ## Future Work
 The AutoML model produced in this project had less than 90% accuracy and leaves room for improvement. The following are some suggestions that could increase the accuracy of the model:
