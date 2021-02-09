@@ -61,6 +61,7 @@ The most accurate model produced by the AutoML experiment was almost always Voti
 
 *Screenshot: Best Model from AutoML Run*
 ![AutoMLBestModel](https://user-images.githubusercontent.com/73516567/107420857-37fbfb00-6ace-11eb-959c-e565366d40c1.png)
+![AutoMLRunMetrics](https://user-images.githubusercontent.com/73516567/107422577-0e43d380-6ad0-11eb-8b19-ff45c546e71a.png)
 
 
 ## Hyperparameter Tuning
@@ -92,6 +93,7 @@ The deployed Voting Ensemble model takes the input variables in the "Test Web Se
 
 
 *Screenshot: Web Service Test on Deployed Model*
+![TestWebService](https://user-images.githubusercontent.com/73516567/107422607-1734a500-6ad0-11eb-93a9-2cd6e4d54326.png)
 
 
 ## Future Work
