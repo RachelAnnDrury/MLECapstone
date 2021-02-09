@@ -16,6 +16,8 @@ Most cardiovascular diseases can be prevented by addressing behavioural risk fac
 
 People with cardiovascular disease or who are at high cardiovascular risk (due to the presence of one or more risk factors such as hypertension, diabetes, hyperlipidaemia or already established disease) need early detection and management wherein a machine learning model can be of great help.
 
+*Kaggle URL:* https://www.kaggle.com/andrewmvd/heart-failure-clinical-data/code
+
 ### Acknowledgements
 This Jupyter Notebook utilizes the Heart Failure Prediction Dataset, downloaded from Kaggle under License "Attribution 4.0 International" or "CC BY 4.0." Credit: Davide Chicco, Giuseppe Jurman: Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone. BMC Medical Informatics and Decision Making 20, 16 (2020).
 
@@ -73,4 +75,5 @@ Visit this URL: ***SCREENCASTURL*** to view the project screencast, demonstratin
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
+
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate above listed items
