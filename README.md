@@ -4,7 +4,7 @@ Machine Learning Engineer with Microsoft Azure Capstone Project: Heart Failure P
 
 
 ## Project Set Up and Installation
-The Jupyter Notebooks in this project are designed for use in the Microsoft Azure SDK. Files necessary to upload to the directory include hyperparameter_tuning.ipynb, automl.ipynb, train.py, and score.py. Each Jupyter Notebook can be run independently, but it is best to first run the hyperparameter_tuning.ipynb and then the automl.ipynb, since they are assigned to use the same compute, and the automl.ipynb will clean-up resources. To use a different compute than the one assigned, update the amlcompute_cluster_name from 'mlecscompute' to the name of the desired existing compute. Please note that the Notebooks also require interactive authentication to set-up the workspace, which involves entering a key code through Microsoft's device login. 
+The Jupyter Notebooks in this project are designed for use in the Microsoft Azure SDK. Files necessary to upload to the directory include hyperparameter_tuning.ipynb, automl.ipynb, train.py, score.py, and the dataset (heart_failure_clinical_records_dataset.csv, which will be uploaded from the internet within the Notebooks, if needed). Each Jupyter Notebook can be run independently, but it is best to first run the hyperparameter_tuning.ipynb and then the automl.ipynb, since they are assigned to use the same compute, and the automl.ipynb will clean-up resources. To use a different compute than the one assigned, update the amlcompute_cluster_name from 'mlecscompute' to the name of the desired existing compute. Please note that the Notebooks also require interactive authentication to set-up the workspace, which involves entering a key code through Microsoft's device login. 
 
 ## Dataset
 
