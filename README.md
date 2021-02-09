@@ -36,8 +36,7 @@ This Jupyter Notebook utilizes the Heart Failure Prediction Dataset, downloaded 
 - Sex (binary classification)
 - Smoking (binary classification)
 - Time (days included in follow-up period)
-*TARGET COLUMN:*
-- Death event (binary classification; if patient died during follow-up period)
+- Death event (binary classification; if patient died during follow-up period) *TARGET COLUMN*
 
 ### Task
 Create a binary classification model to assess the likelihood of a patient's death by heart failure event using the Kaggle dataset. This project includes two separate Jupyter Notebooks: hyperparameter_tuning.ipynb and automl.ipynb, which include a machine learning experiment powered by HyperDrive for hyperparameter tuning, and an AutoML experiment, respectively. The most accurate model from these experiments was from the AutoML experiment, so that model is also deployed to a web service, and the web service is pinged with a test prediction. The automl.ipynb Notebook also includes the necessary resources clean-up to end the experiment. 
