@@ -92,7 +92,7 @@ The deployed Voting Ensemble model takes the input variables in the "Test Web Se
 ![AutoMLEndpoint1](https://user-images.githubusercontent.com/73516567/107421230-8e693980-6ace-11eb-99ff-e97f60387263.png)
 
 
-*Screenshot: Web Service Test on Deployed Model*
+*Screenshot: Web Service Test on Deployed Model (binary prediction result = 1; positive DEATH_EVENT)*
 ![TestWebService](https://user-images.githubusercontent.com/73516567/107422607-1734a500-6ad0-11eb-93a9-2cd6e4d54326.png)
 
 
@@ -104,7 +104,7 @@ The AutoML model produced in this project had less than 90% accuracy and leaves 
 - Increase resource allocation and add layers if more data is available to analyze (at the current size, additional resources would not be well-used, but if new variables were added, additional computing time and resources may be necessary to analyze their relevance in relation to the existing variables and each other. 
 
 ## Screen Recording
-Visit this URL: https://youtu.be/Gz5obDgoiUc to view the project screencast, demonstrating: 
+Visit this URL: https://youtu.be/XPYkFoh2UFw to view the project screencast, demonstrating: 
 - A working model
 - Demo of the deployed  model
 - Sample request sent to the endpoint and its response
