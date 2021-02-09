@@ -4,7 +4,7 @@ Machine Learning Engineer with Microsoft Azure Capstone Project: Heart Failure P
 
 
 ## Project Set Up and Installation
-The Jupyter Notebooks in this project are designed for use in the Microsoft Azure SDK. Files necessary to upload to the directory include hyperparameter_tuning.ipynb, automl.ipynb, train.py, and score.py. Each Jupyter Notebook can be run independently, but it is best to first run the hyperparameter_tuning.ipynb and then the automl.ipynb, since they are assigned to use the same compute, and the automl.ipynb will clean-up resources. To use a different compute than the one assigned, update the amlcompute_cluster_name from 'mlecscompute' to the name of the desired existing compute.
+The Jupyter Notebooks in this project are designed for use in the Microsoft Azure SDK. Files necessary to upload to the directory include hyperparameter_tuning.ipynb, automl.ipynb, train.py, and score.py. Each Jupyter Notebook can be run independently, but it is best to first run the hyperparameter_tuning.ipynb and then the automl.ipynb, since they are assigned to use the same compute, and the automl.ipynb will clean-up resources. To use a different compute than the one assigned, update the amlcompute_cluster_name from 'mlecscompute' to the name of the desired existing compute. Please note that the Notebooks also require interactive authentication to set-up the workspace, which involves entering a key code through Microsoft's device login. 
 
 ## Dataset
 
@@ -64,10 +64,13 @@ The Logistic Regression Model powered by HyperDrive hyperparameter tuning consis
 **SCREENSHOT** Best Model trained with parameters
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+The deployed Voting Ensemble model takes the input variables in the "Test Web Service" section of the automl.ipynb file. To submit a query, simply edit the "Test Web Service" data to the desired inputs and run that cell and the following, which contains the "result" variable and prints the prediction based upon the data inputs. 
+
+***SCREENSHOT*** Deployed Model - test (from notebook)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+Visit this URL: ***SCREENCASTURL*** to view the project screencast, demonstrating: 
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
+*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate above listed items
