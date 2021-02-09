@@ -63,9 +63,17 @@ The "C" parameter controls the penalty strength ("inverse regularity strength") 
 ### Results
 The Logistic Regression Model powered by HyperDrive hyperparameter tuning consistently gave results around 81% accuracy (the primary metric), which is above the minimum that I set for the experiment (80%), but below the target of 85%+. Refining and fine tuning additional hyperparameters could have provided a superior model, but reviewing the results, including those from the AutoML run, a random forest classifier would have likely provided a more accurate model. If possible, gathering additional datapoints and expanding the set could also increase the accuracy of the model. 
 
-*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-**SCREENSHOT** RunDetails widget for HyperDrive
-**SCREENSHOT** Best Model trained with parameters
+*Screenshot: RunDetails Widget from Hyperdrive Hyperparameter Tuning Run*
+![HyperRunDetailsWidget3](https://user-images.githubusercontent.com/73516567/107421017-595ce700-6ace-11eb-8ef8-1ee69f01ee71.png)
+
+
+*Screenshot: RunDetails Widget from Hyperdrive Hyperparameter Tuning Run with Child Run Details*
+![HyperRunDetailsWidget2](https://user-images.githubusercontent.com/73516567/107421193-85786800-6ace-11eb-8c8c-a5b596bb2ad0.png)
+
+
+*Screenshot: Best Model from Hyperdrive Hyperparameter Tuning Run*
+![HyperBestModel4](https://user-images.githubusercontent.com/73516567/107420913-4518ea00-6ace-11eb-86da-299e68cd063b.png)
+
 
 ## Model Deployment
 The deployed Voting Ensemble model takes the input variables in the "Test Web Service" section of the automl.ipynb file. To submit a query, simply edit the "Test Web Service" data to the desired inputs and run that cell and the following, which contains the "result" variable and prints the prediction based upon the data inputs. 
