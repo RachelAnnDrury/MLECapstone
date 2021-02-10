@@ -69,6 +69,10 @@ The configuration settings for this AutoML experiment rely on the advantages of 
 ### Results
 The most accurate model produced by the AutoML experiment was almost always Voting Ensemble, followed closely by Stacking Ensemble, with accuracy ranging from 87% - 89%. Separate experimental attempts at altering the settings yielded little to no difference, so the best way to improve the accuracy of this model would be to obtain more datapoints (rows in the dataset) and potentially additional relevant features (columns in the dataset). Generally time, serum_creatinine, and ejection fraction were the most important variables, but there may be additional information (features) that could be included about the patients to improve accuracy without overfitting. 
 
+*Screenshot: Selecting RunDetails Widget from AutoML Run by clicking "View run details"*
+![AutoMLRunDetailsWidget4](https://user-images.githubusercontent.com/73516567/107461215-67caf300-6b0e-11eb-8cda-7ead3998337c.png)
+
+
 *Screenshot: RunDetails Widget from AutoML Run*
 ![AutoMLRunDetailsWidget1](https://user-images.githubusercontent.com/73516567/107421126-7691b580-6ace-11eb-9674-18161b0f7c0a.png)
 
@@ -91,11 +95,11 @@ The "C" parameter controls the penalty strength ("inverse regularity strength") 
 The Logistic Regression Model powered by HyperDrive hyperparameter tuning consistently gave results around 81% accuracy (the primary metric), which is above the minimum that I set for the experiment (80%), but below the target of 85%+. Refining and fine tuning additional hyperparameters could have provided a superior model, but reviewing the results, including those from the AutoML run, a random forest classifier would have likely provided a more accurate model. If possible, gathering additional datapoints and expanding the set could also increase the accuracy of the model. 
 
 *Screenshot: RunDetails Widget from Hyperdrive Hyperparameter Tuning Run*
-![HyperRunDetailsWidget3](https://user-images.githubusercontent.com/73516567/107421017-595ce700-6ace-11eb-8ef8-1ee69f01ee71.png)
+![HyperRunDetailsWidget2](https://user-images.githubusercontent.com/73516567/107421193-85786800-6ace-11eb-8c8c-a5b596bb2ad0.png)
 
 
 *Screenshot: RunDetails Widget from Hyperdrive Hyperparameter Tuning Run with Child Run Details*
-![HyperRunDetailsWidget2](https://user-images.githubusercontent.com/73516567/107421193-85786800-6ace-11eb-8c8c-a5b596bb2ad0.png)
+![HyperRunDetailsWidget3](https://user-images.githubusercontent.com/73516567/107421017-595ce700-6ace-11eb-8ef8-1ee69f01ee71.png)
 
 
 *Screenshot: Best Model from Hyperdrive Hyperparameter Tuning Run*
