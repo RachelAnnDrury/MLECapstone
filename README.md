@@ -54,6 +54,7 @@ The configuration settings for this AutoML experiment rely on the advantages of 
 - Experiment Timeout: 20 minutes
 - Maximum Concurrent Iterations: 5
 - Primary Metric: Accuracy
+
 *AutoML Config:*
 - Task: Classification
 - Training Data: "dataset" variable (dataset referenced above)
