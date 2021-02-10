@@ -49,6 +49,7 @@ The dataset is from outside the AzureML framework. Both Notebooks search for the
 The configuration settings for this AutoML experiment rely on the advantages of using AutoML to detect the relationship between a series of variables and a target binary classification. Settings allow for twenty minutes of experimentation with a maximum of five concurrent iterations focused on increasing the overall accuracy of the model.
 
 **AutoML Parameters:**
+
 *AutoMLSettings*
 - Experiment Timeout: 20 minutes
 - Maximum Concurrent Iterations: 5
