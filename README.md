@@ -48,6 +48,22 @@ The dataset is from outside the AzureML framework. Both Notebooks search for the
 ## Automated ML
 The configuration settings for this AutoML experiment rely on the advantages of using AutoML to detect the relationship between a series of variables and a target binary classification. Settings allow for twenty minutes of experimentation with a maximum of five concurrent iterations focused on increasing the overall accuracy of the model.
 
+**AutoML Parameters:**
+*AutoMLSettings*
+- Experiment Timeout: 20 minutes
+- Maximum Concurrent Iterations: 5
+- Primary Metric: Accuracy
+*AutoML Config:*
+- Task: Classification
+- Training Data: "dataset" variable (dataset referenced above)
+- Label Column Name (Target): "DEATH_EVENT"
+- Path: Project Folder
+- Enable Early Stopping Policy: True
+- Featurization: Auto
+- Debug Log: "automl_errors.log"
+
+![AutoMLSettings](https://user-images.githubusercontent.com/73516567/107456650-60531c00-6b05-11eb-8dae-d8f08bdbcf57.png)
+
 ### Results
 The most accurate model produced by the AutoML experiment was almost always Voting Ensemble, followed closely by Stacking Ensemble, with accuracy ranging from 87% - 89%. Separate experimental attempts at altering the settings yielded little to no difference, so the best way to improve the accuracy of this model would be to obtain more datapoints (rows in the dataset) and potentially additional relevant features (columns in the dataset). Generally time, serum_creatinine, and ejection fraction were the most important variables, but there may be additional information (features) that could be included about the patients to improve accuracy without overfitting. 
 
